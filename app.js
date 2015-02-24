@@ -5,7 +5,7 @@ var sendgrid = require("sendgrid")(keys.sendgrid_username, keys.sendgrid_passwor
 var https = require('https');
 var format = require('json-nice');
 var nodemailer = require('nodemailer');
-
+var html_content = '<html xmlns="http://www.w3.org/1999/xhtml"> <head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> <meta name="viewport" content="width=device-width"/> <!-- For development, pass document through inliner --> <link rel="stylesheet" href="css/simple.css"> <style type="text/css"> /* Your custom styles go here */ </style> </head> <body> <table class="body-wrap"> <tr> <td class="container"> <!-- Message start --> <table> <tr> <td align="center" class="masthead"> <h1>Something Big...</h1> </td> </tr> <tr> <td class="content"> <h2>Hi Stranger,</h2> <p>Kielbasa venison ball tip shankle. Boudin prosciutto landjaeger, pancetta jowl turkey tri-tip porchetta beef pork loin drumstick. Frankfurter short ribs kevin pig ribeye drumstick bacon kielbasa. Pork loin brisket biltong, pork belly filet mignon ribeye pig ground round porchetta turducken turkey. Pork belly beef ribs sausage ham hock, ham doner frankfurter pork chop tail meatball beef pig meatloaf short ribs shoulder. Filet mignon ham hock kielbasa beef ribs shank. Venison swine beef ribs sausage pastrami shoulder.</p> <table> <tr> <td align="center"> <p> <a href="#" class="button">Share the Awesomeness</a> </p> </td> </tr> </table> <p>By the way, if you are wondering where you can find more of this fine meaty filler, visit <a href="http://baconipsum.com">Bacon Ipsum</a>.</p> <p><em>– Mr. Pen</em></p> </td> </tr> </table> </td> </tr> <tr> <td class="container"> <!-- Message start --> <table> <tr> <td class="content footer" align="center"> <p>Sent by <a href="#">Company Name</a>, 1234 Yellow Brick Road, OZ, 99999</p> <p><a href="mailto:">hello@company.com</a> | <a href="#">Unsubscribe</a></p> </td> </tr> </table> </td> </tr> </table> </body> </html>'
 
 // Configure our HTTP server to respond with Hello World to all requests.
 var server = http.createServer(function (request, response) {
@@ -32,7 +32,7 @@ var mailOptions = {
     to: 'ayachamaneni@gmail.com', // list of receivers 
     subject: 'Bananas', // Subject line 
     text: 'Hello Reddy ', // plaintext body 
-    html: '' // html body 
+    html: html_content // html body 
 };
  
 // send mail with defined transport object 
