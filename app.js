@@ -109,10 +109,5 @@ https.get('https://api.angel.co/1/jobs?access_token=' + keys.angellist_token, fu
 }).on('error', function(e) {
   console.error(e);
 });
- 
 
-// // Init the object with your API key 
-// angel.init('133e64ac161f3d33956a9555dc3de411dd09415f5ce36cd7'
-// , '5e9096fbe19f88c1336ba38e858028bd8f4166c5a3acdba7');
- 
 // Search for a internship name 
