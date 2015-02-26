@@ -1,10 +1,12 @@
+- var internships = [['Company - Software Intern',"Work in a team of people who abuse buzzwords all the time.  No seriously, they use big data every opportunity they have, even when it's totally irrelavent.  They also love to write long-ass strings to test the layout of some silly program they're testing"],['Company - Software Intern',"Work in a team of people who abuse buzzwords all the time.  No seriously, they use big data every opportunity they have, even when it's totally irrelavent.  They also love to write long-ass strings to test the layout of some silly program they're testing"]]
+
 doctype strict
 html(xmlns = 'http://www.w3.org/1999/xhtml')
 	head
 		meta(http-equiv = 'Content-Type', content = 'text/html; charset=UTF-8')
 		meta(name = 'viewport', content = 'width=device-width, initial-scale=1')
 		title New Internships!
-		style
+		style(type="text/css")
 			include ../css/simple.css
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css')
 	body
@@ -17,17 +19,10 @@ html(xmlns = 'http://www.w3.org/1999/xhtml')
 								h1 Yo dawg, I found you some internships
 						tr
 							td.content
-								table
-									tr(align="center")
-										td
-											h4 Internship 1
-											p Google, unpaid
-											hr
-											h4 Internship 2
-											p Apple, unpaid.
-											hr
-											h4 Internship 3
-											p Uber, unpaid.
+								each el in internships
+									h4= el[0]
+									p= el[1]
+									hr
 			tr
 				td.container
 					table
