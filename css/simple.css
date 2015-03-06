@@ -81,7 +81,8 @@ hr {
   display: block !important;
   clear: both !important;
   margin: 0 auto !important;
-  max-width: 580px !important;
+  padding-top: 3%;
+  max-width: 600px !important;
 }
 .container table {
   width: 100% !important;
@@ -100,7 +101,7 @@ hr {
 .container .content {
   background: white;
   padding: 30px 35px;
-  text-align: center;
+  text-align: left;
 }
 .container .content.footer {
   background: none;

@@ -6,8 +6,8 @@ html(xmlns = 'http://www.w3.org/1999/xhtml')
 		meta(http-equiv = 'Content-Type', content = 'text/html; charset=UTF-8')
 		meta(name = 'viewport', content = 'width=device-width, initial-scale=1')
 		title New Internships!
-		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css')
-	body
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
+	body(style="font-family:Open Sans;")
 		div.all-wrap
 			table.body-wrap
 				tr
@@ -15,11 +15,12 @@ html(xmlns = 'http://www.w3.org/1999/xhtml')
 						table
 							tr
 								td.masthead(align="center")
-									h1 Yo dawg, I found you some internships
+									h1 Internbox
+									h2 Connecting students to internship everywhere
 							tr
 								td.content
 									each el in internships
-										h4= el['title']
+										h4(style="text-align=left;")= el['title']
 										h5= el['company']
 										p= el['description']
 										a(href=el['url']) More information
