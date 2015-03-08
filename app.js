@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var minify = require('express-minify');
 
 var routes = require('./routes/index');
 
@@ -19,6 +20,17 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// turn on pretty print while developing
+if (app.get('env') === 'development') {
+  app.locals.pretty = true;
+  app.use(function(req, res, next) {
+    res._skip = true;
+    next();
+  });
+}
+
+app.use(minify());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);

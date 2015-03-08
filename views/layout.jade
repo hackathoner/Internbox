@@ -2,10 +2,28 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/css/normalize.css')
     link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/main.css')
     script(src='/js/plugins.js')
     script(src='/js/main.js')
+    script(src='/js/vendor/modernizr-2.8.3.min.js')
   body
+    div.header-container
+        header.wrapper.clearfix
+            h1.title h1.title
+            nav
+                ul
+                    li
+                        a(href="#")
+                            nav ul li a
+                    li
+                        a(href="#")
+                            nav ul li a
+                    li
+                        a(href="#")
+                            nav ul li a
+
     block content
     footer
         script(src='/js/analytics.js')
