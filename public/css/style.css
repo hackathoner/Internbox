@@ -1033,6 +1033,7 @@
 	#banner {
 		background-image: url(../images/dark_tint.png), url(../images/bg.jpg);
 		background-position: center center;
+		background-attachment: fixed;
 		background-size: cover;
 		color: #ffffff;
 		padding: 14em 0em 14em;
