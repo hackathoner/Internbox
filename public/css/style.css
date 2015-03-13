@@ -1057,6 +1057,10 @@
 			margin-bottom: 1.75em;
 		}
 
+		#banner.small {
+			padding:8em 0em 8em;
+		}
+
 /* Wrapper */
 
 	.wrapper {
