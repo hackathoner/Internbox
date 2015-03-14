@@ -1032,11 +1032,13 @@
 
 	#banner {
 		background-image: url(../images/dark_tint.png), url(../images/bg-c.jpg);
-		background-position: center center;
 		background-attachment: fixed;
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		color: #ffffff;
 		padding: 14em 0em 14em;
 		text-align: center;

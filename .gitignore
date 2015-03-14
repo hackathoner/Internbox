@@ -26,3 +26,5 @@ node_modules
 
 templates/*.html
 keys.js
+
+bower_components
