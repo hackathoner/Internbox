@@ -21,6 +21,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
 
 // turn on pretty print while developing
 if (app.get('env') === 'development') {
@@ -42,7 +43,6 @@ if (app.get('env') === 'development') {
 }
 
 app.use(minify());
-app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', express.static(__dirname + '/bower_components'));
 
