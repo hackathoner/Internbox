@@ -32,6 +32,7 @@ if (app.get('env') === 'development') {
 
 app.use(minify());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(__dirname + '/bower_components'));
 
 app.use('/', routes);
 

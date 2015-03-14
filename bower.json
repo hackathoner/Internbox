@@ -14,5 +14,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "skel": "~2.2.1",
+    "skel-layers": "~2.0.2",
+    "jquery": "~2.1.3"
+  }
 }
