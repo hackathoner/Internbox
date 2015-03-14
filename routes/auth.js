@@ -2,33 +2,21 @@ var express = require('express');
 var router = express.Router();
 
 //sends the request through our local signup strategy, and if successful takes user to homepage, otherwise returns then to signin page
-<<<<<<< HEAD
 router.post('/local-reg', passport.authenticate('local-signup', {
-=======
-app.post('/local-reg', passport.authenticate('local-signup', {
->>>>>>> 8f532ad7a60d5267972af8c9edde8edac5eecbf3
   successRedirect: '/',
   failureRedirect: '/signin'
   })
 );
 
 //sends the request through our local login/signin strategy, and if successful takes user to homepage, otherwise returns then to signin page
-<<<<<<< HEAD
 router.post('/login', passport.authenticate('local-signin', { 
-=======
-app.post('/login', passport.authenticate('local-signin', { 
->>>>>>> 8f532ad7a60d5267972af8c9edde8edac5eecbf3
   successRedirect: '/',
   failureRedirect: '/signin'
   })
 );
 
 //logs user out of site, deleting them from the session, and returns to homepage
-<<<<<<< HEAD
 router.get('/logout', function(req, res){
-=======
-app.get('/logout', function(req, res){
->>>>>>> 8f532ad7a60d5267972af8c9edde8edac5eecbf3
   var name = req.user.username;
   console.log("LOGGIN OUT " + req.user.username)
   req.logout();
