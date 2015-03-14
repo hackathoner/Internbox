@@ -8,7 +8,7 @@ var minify = require('express-minify');
 var compression = require('compression')
 
 var index = require('./routes/index');
-var login = require('./routes/auth');
+// var login = require('./routes/auth');
 
 var app = express();
 
@@ -48,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', express.static(__dirname + '/bower_components'));
 
 app.use('/', index);
-app.use('/auth', login);
+// app.use('/auth', login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
