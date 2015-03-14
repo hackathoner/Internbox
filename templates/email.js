@@ -1,4 +1,4 @@
-var keys = require("./keys.js");
+var keys = require("../keys.js");
 var sendgrid = require("sendgrid")(keys.sendgrid_username, keys.sendgrid_password);
 var https = require("https");
 var format = require("json-nice");

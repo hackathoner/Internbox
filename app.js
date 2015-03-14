@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 var minify = require('express-minify');
 var compression = require('compression')
 
-var routes = require('./routes/index');
+var index = require('./routes/index');
+var login = require('./routes/auth');
 
 var app = express();
 
@@ -46,7 +47,8 @@ app.use(minify());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', express.static(__dirname + '/bower_components'));
 
-app.use('/', routes);
+app.use('/', index);
+app.use('/auth', login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
